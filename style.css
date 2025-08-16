@@ -74,7 +74,7 @@ section {
 }
 
 
-#tropicalia {
+#SpikePro {
     position: relative;
     padding-top: 5rem;
     margin-top: 3rem;
@@ -85,7 +85,7 @@ section {
     /* Ajuste o tamanho conforme necessário */
 }
 
-#tropicalia .container {
+#SpikePro .container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,7 +188,7 @@ h2 {
     color: var(--alto-contraste-fundo)
 }
 
-.alto-contraste #tropicalia {
+.alto-contraste #SpikePro {
     background: none;
 }
 

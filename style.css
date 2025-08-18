@@ -41,7 +41,6 @@ section {
     margin: 0 auto;
 }
 
-/* posicionamento para a imagem à direita */
 .img-inicio {
     position: absolute;
     right: 0;
@@ -132,7 +131,7 @@ h2 {
 }
 
 .formulario button {
-    background-color: #CB6D43;
+    background-color: #3308cc;
     border: none;
     font-weight: bold;
 }
@@ -166,7 +165,7 @@ h2 {
   position: fixed;
   top: 20px;   /* distância do topo */
   right: 20px; /* distância da direita */
-  z-index: 1000; /* para ficar acima dos outros elementos */
+  z-index: 1000; 
 }
 
 #opcoes-acessibilidade {

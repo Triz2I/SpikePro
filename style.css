@@ -161,6 +161,22 @@ h2 {
 .opcoes-acessibilidade button{
     margin-bottom: 5px;
 }
+
+#botao-acessibilidade {
+  position: fixed;
+  top: 20px;   /* distância do topo */
+  right: 20px; /* distância da direita */
+  z-index: 1000; /* para ficar acima dos outros elementos */
+}
+
+#opcoes-acessibilidade {
+  position: fixed;
+  top: 60px;   /* aparece logo abaixo do botão */
+  right: 20px;
+  display: none; /* só aparece quando for ativado */
+  z-index: 999;
+}
+
 .apresenta-lista{
     display: none;
 }

@@ -3,29 +3,28 @@
 
 :root {
   --azul: #181061;
-  --azul-claro: #3308cc; /* definido para evitar erro */
+  --azul-claro: #3308cc;
   --alto-contraste-fundo: #000000;
   --alto-contraste-texto: #ffffff;
   --alto-contraste-link: #ffd700;
 }
+
+* { box-sizing: border-box; }
 
 body {
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
 }
 
-header {
-  background-color: #ffffff;
+:focus-visible {
+  outline: 3px solid var(--azul-claro);
+  outline-offset: 2px;
 }
 
-section {
-  padding-bottom: 5rem;
-}
+header { background-color: #ffffff; }
+section { padding-bottom: 5rem; }
 
-.nav-link {
-  color: var(--azul);
-  font-weight: 600;
-}
+.nav-link { color: var(--azul); font-weight: 600; }
 
 .inicio-fundo {
   background-image: url('img/4965007.jpg');
@@ -48,12 +47,7 @@ section {
   height: auto;
 }
 
-.esquerda-conteudo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-}
+.esquerda-conteudo { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
 
 .botao-inicio {
   background-color: var(--azul-claro);
@@ -64,9 +58,7 @@ section {
   align-content: center;
 }
 
-.display-4 {
-  text-shadow: -5px 5px var(--azul-claro);
-}
+.display-4 { text-shadow: -5px 5px var(--azul-claro); }
 
 #SpikePro {
   position: relative;
@@ -77,34 +69,15 @@ section {
   background-size: 180px 180px;
 }
 
-#SpikePro .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-}
+#SpikePro .container { display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
 
-h2 {
-  font-family: 'Lemon', serif;
-  font-size: 2.5em;
-  color: var(--azul-claro);
-}
+h2 { font-family: 'Lemon', serif; font-size: 2.5em; color: var(--azul-claro); }
 
-#galeria {
-  background-color: #FAF4F4;
-}
+#galeria { background-color: #FAF4F4; }
 
-.fundo-galeria {
-  background: url('img/flor-bottom-direita.png') bottom right no-repeat;
-  background-size: 180px 180px;
-}
+.fundo-galeria { background: url('img/flor-bottom-direita.png') bottom right no-repeat; background-size: 180px 180px; }
 
-#contato {
-  background-image: url('img/4965007.jpg');
-  background-size: cover;
-  padding: 4rem 0;
-}
+#contato { background-image: url('img/4965007.jpg'); background-size: cover; padding: 4rem 0; }
 
 .formulario {
   background-color: #ffffff;
@@ -114,71 +87,40 @@ h2 {
   font-weight: bold;
 }
 
-.formulario button {
-  background-color: var(--azul-claro);
-  border: none;
-  font-weight: bold;
+.formulario button { background-color: var(--azul-claro); border: none; font-weight: bold; }
+.form-control { background-color: #F1EDEF; }
+
+/* ===== Acessibilidade (fixo no topo direito) ===== */
+.menu-acessibilidade { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+#botao-acessibilidade { position: fixed; top: 20px; right: 20px; z-index: 1001; }
+
+/* Painel: oculto por [hidden], visível com .is-open */
+#opcoes-acessibilidade { 
+  position: fixed; 
+  top: 64px; 
+  right: 20px; 
+  display: flex; 
+  flex-direction: column; 
+  gap: .5rem; 
+  z-index: 1000; 
+  opacity: 0; 
+  transform: translateY(-4px); 
+  transition: opacity .2s ease, transform .2s ease; 
 }
 
-.form-control {
-  background-color: #F1EDEF;
-}
+#opcoes-acessibilidade[hidden] { display: none !important; }
+#opcoes-acessibilidade.is-open { opacity: 1; transform: translateY(0); }
 
-/* ===== Acessibilidade ===== */
-
-.menu-acessibilidade {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-#botao-acessibilidade {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-#opcoes-acessibilidade {
-  position: fixed;
-  top: 64px;
-  right: 20px;
-  display: none;
-  flex-direction: column;
-  gap: .5rem;
-  z-index: 999;
-}
-
-#opcoes-acessibilidade.mostrar {
-  display: flex;
-}
-
-.alto-contraste {
-  background-color: var(--alto-contraste-fundo);
-  color: var(--alto-contraste-texto);
-}
-
+/* Tema alto contraste */
+.alto-contraste { background-color: var(--alto-contraste-fundo); color: var(--alto-contraste-texto); }
 .alto-contraste header,
 .alto-contraste footer,
-.alto-contraste .formulario {
-  background-color: var(--alto-contraste-fundo);
-  color: var(--alto-contraste-texto);
-}
-
-.alto-contraste .nav-link {
-  color: var(--alto-contraste-link);
-}
-
+.alto-contraste .formulario { background-color: var(--alto-contraste-fundo); color: var(--alto-contraste-texto); }
+.alto-contraste .nav-link { color: var(--alto-contraste-link); }
 .alto-contraste .botao-inicio,
 .alto-contraste .formulario button,
-.alto-contraste .btn-primary {
-  background-color: var(--alto-contraste-link);
-  color: var(--alto-contraste-fundo);
-}
-
+.alto-contraste .btn-primary { background-color: var(--alto-contraste-link); color: var(--alto-contraste-fundo); }
 .alto-contraste #SpikePro,
 .alto-contraste #galeria,
-.alto-contraste .fundo-galeria {
-  background: none;
-}
+.alto-contraste .fundo-galeria { background: none; }
+

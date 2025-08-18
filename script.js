@@ -1,46 +1,74 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
-  const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade');
+  const btn = document.getElementById('botao-acessibilidade');
+  const panel = document.getElementById('opcoes-acessibilidade');
 
-  if (botaoDeAcessibilidade && opcoesDeAcessibilidade) {
-    botaoDeAcessibilidade.addEventListener('click', function () {
-      // Alterna exibição das opções
-      opcoesDeAcessibilidade.classList.toggle('mostrar');
+  if (!btn || !panel) return;
 
-      // Atualiza estado aria-expanded
-      const aberto = opcoesDeAcessibilidade.classList.contains('mostrar');
-      botaoDeAcessibilidade.setAttribute('aria-expanded', String(aberto));
-    });
-  }
+  // Normaliza classes antigas que escondiam o painel
+  panel.classList.remove('apresenta-lista');
 
-  const aumentaFonteBotao = document.getElementById('aumentar-fonte');
-  const diminuiFonteBotao = document.getElementById('diminuir-fonte');
-  const alternaContraste = document.getElementById('alterna-contraste');
+  // Estado inicial: fechado
+  panel.setAttribute('hidden', '');
+  btn.setAttribute('aria-expanded', 'false');
+  btn.setAttribute('aria-controls', 'opcoes-acessibilidade');
+  btn.setAttribute('type', 'button');
 
-  let tamanhoAtualFonte = 1;
+  const open = () => {
+    panel.classList.add('is-open');
+    panel.removeAttribute('hidden');
+    btn.setAttribute('aria-expanded', 'true');
+  };
 
-  if (aumentaFonteBotao) {
-    aumentaFonteBotao.addEventListener('click', function () {
-      tamanhoAtualFonte = Math.min(tamanhoAtualFonte + 0.1, 2); // limite máx 200%
-      document.body.style.fontSize = `${tamanhoAtualFonte}rem`;
-    });
-  }
+  const close = () => {
+    panel.classList.remove('is-open');
+    panel.setAttribute('hidden', '');
+    btn.setAttribute('aria-expanded', 'false');
+  };
 
-  if (diminuiFonteBotao) {
-    diminuiFonteBotao.addEventListener('click', function () {
-      tamanhoAtualFonte = Math.max(tamanhoAtualFonte - 0.1, 0.7); // limite mín 70%
-      document.body.style.fontSize = `${tamanhoAtualFonte}rem`;
-    });
-  }
+  // Toggle ao clicar no botão
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    if (panel.classList.contains('is-open')) {
+      close();
+    } else {
+      open();
+    }
+  });
 
-  if (alternaContraste) {
-    alternaContraste.addEventListener('click', function () {
-      document.body.classList.toggle('alto-contraste');
-    });
-  }
+  // Fecha ao clicar fora
+  document.addEventListener('click', function (e) {
+    if (panel.classList.contains('is-open') && !panel.contains(e.target) && e.target !== btn) {
+      close();
+    }
+  });
+
+  // Fecha com ESC
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') close();
+  });
+
+  // Controles de fonte e contraste
+  const inc = document.getElementById('aumentar-fonte');
+  const dec = document.getElementById('diminuir-fonte');
+  const contrast = document.getElementById('alterna-contraste');
+  let fontRem = 1;
+
+  if (inc) inc.addEventListener('click', function () {
+    fontRem = Math.min(fontRem + 0.1, 2);
+    document.body.style.fontSize = `${fontRem}rem`;
+  });
+
+  if (dec) dec.addEventListener('click', function () {
+    fontRem = Math.max(fontRem - 0.1, 0.7);
+    document.body.style.fontSize = `${fontRem}rem`;
+  });
+
+  if (contrast) contrast.addEventListener('click', function () {
+    document.body.classList.toggle('alto-contraste');
+  });
 });
 
-// ScrollReveal com seletor único por seção
+// ScrollReveal (opcional)
 if (typeof ScrollReveal !== 'undefined') {
   ScrollReveal().reveal('#inicio', { delay: 300, distance: '40px' });
   ScrollReveal().reveal('#SpikePro', { delay: 300, distance: '40px' });

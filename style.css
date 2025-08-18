@@ -4,11 +4,11 @@
 
 :root {
   --azul: #181061;
-  --azul-claro: #3308cc;
+  --azul-claro: #535ce4;
   --alto-contraste-fundo: #000000;
   --alto-contraste-texto: #ffffff;
   --alto-contraste-link: #ffd700;
-  --destaque: #0011ff;
+  --destaque: #2b35c2;
 }
 
 * { box-sizing: border-box; }

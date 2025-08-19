@@ -30,11 +30,9 @@
       display: flex;
     }
 
-    
     header .nav {
       margin-top: 0 !important;
     }
-
 
     .pt-6 {
       padding-top: 3rem; /* ~pt-5 */
@@ -78,24 +76,21 @@
       <div class="inicio-fundo d-flex justify-content-between align-items-center">
         <div class="esquerda-conteudo">
           <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas a</h1>
-          <img src="img/logo1spik.png" class="mb-3" alt="Marca SpikePro" width="563" height="278" loading="lazy" decoding="async" />
+
+          <!-- Botão agora vem primeiro -->
           <a href="#SpikePro" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero conhecer!</a>
+
+          <!-- Logo SpikePro abaixo do botão -->
+          <img src="img/logo1spik.png" class="mb-3" alt="Marca SpikePro" width="563" height="278" loading="lazy" decoding="async" />
         </div>
 
-        <!--
-          ATENÇÃO: este arquivo tinha espaço e parênteses no nome: "img/lossy-page1-640px-Os_Jogadores.tif (1).png".
-          Opção 1 (recomendada): renomeie o arquivo para. ter que renomear"img/os_jogadores.png" e use a linha abaixo.
-          Opção 2: mantenha o nome original e substitua espaços por %20 no src.
-        -->
         <img src="img/os_jogadores.png" alt="Obra Os Jogadores" title="Os Jogadores" class="img-fluid img-inicio" loading="lazy" decoding="async" />
-        <!-- Caso não renomeie o arquivo, use: src="img/lossy-page1-640px-Os_Jogadores.tif%20(1).png" -->
       </div>
     </section>
 
     <section id="SpikePro" class="my-5 pt-6 secao-SpikePro" tabindex="0" aria-label="Seção explicativa sobre a SpikePro">
       <div class="container d-flex align-items-center">
         <div class="col-12 col-md-4 d-flex justify-content-center">
-          <!-- Corrigido caminho com "img/img/..." para "img/..." -->
           <img src="img/image1spik.png" class="rounded-pill" width="273" height="331" alt="Ilustração SpikePro" loading="lazy" decoding="async" />
         </div>
         <div class="col-12 col-md-8 mt-4 mt-md-0">
@@ -110,9 +105,7 @@
       <div class="container p-3 mt-3 fundo-galeria">
         <div class="row justify-content-md-center g-4">
           <div class="col-md-4">
-            <!-- Recomenda-se renomear arquivos com acentos/virgulas para nomes simples -->
             <img src="img/jorge_ben_trio_1971.jpg" class="img-fluid rounded-5" alt="Jorge Ben e o Trio Mocotó no Teatro da Lagoa, 1971" loading="lazy" decoding="async" />
-            <!-- Se não renomear, use a URL com encoding: img/lossy-page1-640px-Jorge_Ben_e_o_Trio_Mocotó_no_Teatro_da_Lagoa,_1971.tif.jpg -->
           </div>
           <div class="col-md-4">
             <img src="img/os_mutantes_2.jpg" class="img-fluid rounded-5" alt="Os Mutantes" loading="lazy" decoding="async" />
@@ -167,7 +160,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal.js/4.0.9/scrollreveal.min.js"></script>
   <script src="script.js"></script>
 
-  <!-- Script mínimo para o menu de acessibilidade funcionar mesmo sem script.js -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const botao = document.getElementById('botao-acessibilidade');
@@ -183,3 +175,4 @@
 </body>
 
 </html>
+

@@ -25,35 +25,34 @@ body {
   outline-offset: 2px;
 }
 
-header { 
-  background-color: #ffffff; 
-  position: relative; /* necessário para centralizar menu */
-}
-
+header { background-color: #ffffff; }
 section { padding-bottom: 5rem; }
 
-.nav-link { 
-  color: var(--azul); 
-  font-weight: 700; 
-  font-family: 'Bebas Neue', sans-serif; 
-  letter-spacing: 1px; 
-  font-size: 1.3rem; 
-  padding: 0 1rem;
-}
-
-/* Logo no canto superior esquerdo */
-.logo-site {
-  max-width: 150px;  /* largura proporcional */
-  height: auto;      /* mantém proporção */
-  display: block;
-}
-
-/* Menu centralizado no topo */
+/* MENU CENTRAL */
 .menu-central {
   position: absolute;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  top: 20px;
+  display: flex;          /* lado a lado */
+  gap: 2rem;              /* espaço entre os itens */
+  list-style: none;       /* remove bolinhas */
+  margin: 0;
+  padding: 0;
+}
+
+.menu-central .nav-link {
+  color: var(--azul);
+  font-weight: 700;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.menu-central .nav-link:hover {
+  color: var(--azul-claro);
 }
 
 .inicio-fundo {
@@ -69,20 +68,9 @@ section { padding-bottom: 5rem; }
   overflow: hidden;
 }
 
-.img-inicio { 
-  position: absolute; 
-  right: 0; 
-  bottom: 0; 
-  max-width: 45rem; 
-  height: auto; 
-}
+.img-inicio { position: absolute; right: 0; bottom: 0; max-width: 45rem; height: auto; }
 
-.esquerda-conteudo { 
-  display: flex; 
-  flex-direction: column; 
-  align-items: flex-start; 
-  gap: 1rem; 
-}
+.esquerda-conteudo { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
 
 .botao-inicio {
   background-color: var(--destaque);
@@ -98,50 +86,19 @@ section { padding-bottom: 5rem; }
   letter-spacing: 1px;
 }
 
-.display-4 { 
-  font-family: 'Bebas Neue', sans-serif; 
-  font-size: 3rem; 
-  color: var(--azul); 
-  text-shadow: -3px 3px var(--azul-claro); 
-}
+.display-4 { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--azul); text-shadow: -3px 3px var(--azul-claro); }
 
-#SpikePro { 
-  position: relative; 
-  padding-top: 5rem; 
-  margin: 3rem 0; 
-  background: url('img/flor.png') top right no-repeat, 
-              url('img/flor-esquerda.png') bottom left no-repeat; 
-  background-size: 180px 180px; 
-}
+#SpikePro { position: relative; padding-top: 5rem; margin: 3rem 0; background: url('img/flor.png') top right no-repeat, url('img/flor-esquerda.png') bottom left no-repeat; background-size: 180px 180px; }
 
-#SpikePro .container { 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  position: relative; 
-  z-index: 1; 
-}
+#SpikePro .container { display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
 
-h2 { 
-  font-family: 'Lemon', serif; 
-  font-size: 2.8em; 
-  color: var(--destaque); 
-  text-align: center; 
-  text-transform: uppercase; 
-}
+h2 { font-family: 'Lemon', serif; font-size: 2.8em; color: var(--destaque); text-align: center; text-transform: uppercase; }
 
 #galeria { background-color: #FAF4F4; }
 
-.fundo-galeria { 
-  background: url('img/flor-bottom-direita.png') bottom right no-repeat; 
-  background-size: 180px 180px; 
-}
+.fundo-galeria { background: url('img/flor-bottom-direita.png') bottom right no-repeat; background-size: 180px 180px; }
 
-#contato { 
-  background-image: url('img/4965007.jpg'); 
-  background-size: cover; 
-  padding: 4rem 0; 
-}
+#contato { background-image: url('img/4965007.jpg'); background-size: cover; padding: 4rem 0; }
 
 .formulario {
   background-color: #ffffff;
@@ -153,80 +110,19 @@ h2 {
   font-family: 'Montserrat', sans-serif;
 }
 
-.formulario button { 
-  background-color: var(--destaque); 
-  border: none; 
-  font-weight: bold; 
-  color: #fff; 
-  font-family: 'Bebas Neue', sans-serif; 
-  font-size: 1.2rem; 
-  letter-spacing: 1px; 
-}
+.formulario button { background-color: var(--destaque); border: none; font-weight: bold; color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 1px; }
+.form-control { background-color: #F1EDEF; font-family: 'Montserrat', sans-serif; font-weight: 500; }
 
-.form-control { 
-  background-color: #F1EDEF; 
-  font-family: 'Montserrat', sans-serif; 
-  font-weight: 500; 
-}
+.menu-acessibilidade { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+#botao-acessibilidade { position: fixed; top: 20px; right: 20px; z-index: 1001; background-color: var(--destaque); color: #fff; border: none; padding: .6rem 1rem; border-radius: 8px; font-family: 'Bebas Neue', sans-serif; font-size: 1rem; }
 
-.menu-acessibilidade { 
-  position: fixed; 
-  top: 20px; 
-  right: 20px; 
-  z-index: 1000; 
-}
-
-#botao-acessibilidade { 
-  position: fixed; 
-  top: 20px; 
-  right: 20px; 
-  z-index: 1001; 
-  background-color: var(--destaque); 
-  color: #fff; 
-  border: none; 
-  padding: .6rem 1rem; 
-  border-radius: 8px; 
-  font-family: 'Bebas Neue', sans-serif; 
-  font-size: 1rem; 
-}
-
-#opcoes-acessibilidade { 
-  position: fixed; 
-  top: 64px; 
-  right: 20px; 
-  display: flex; 
-  flex-direction: column; 
-  gap: .5rem; 
-  z-index: 1000; 
-  opacity: 0; 
-  transform: translateY(-4px); 
-  transition: opacity .2s ease, transform .2s ease; 
-}
-
+#opcoes-acessibilidade { position: fixed; top: 64px; right: 20px; display: flex; flex-direction: column; gap: .5rem; z-index: 1000; opacity: 0; transform: translateY(-4px); transition: opacity .2s ease, transform .2s ease; }
 #opcoes-acessibilidade[hidden] { display: none !important; }
 #opcoes-acessibilidade.is-open { opacity: 1; transform: translateY(0); }
 
-.alto-contraste { 
-  background-color: var(--alto-contraste-fundo); 
-  color: var(--alto-contraste-texto); 
-}
-
-.alto-contraste header, 
-.alto-contraste footer, 
-.alto-contraste .formulario { 
-  background-color: var(--alto-contraste-fundo); 
-  color: var(--alto-contraste-texto); 
-}
-
+.alto-contraste { background-color: var(--alto-contraste-fundo); color: var(--alto-contraste-texto); }
+.alto-contraste header, .alto-contraste footer, .alto-contraste .formulario { background-color: var(--alto-contraste-fundo); color: var(--alto-contraste-texto); }
 .alto-contraste .nav-link { color: var(--alto-contraste-link); }
+.alto-contraste .botao-inicio, .alto-contraste .formulario button, .alto-contraste .btn-primary { background-color: var(--alto-contraste-link); color: var(--alto-contraste-fundo); }
+.alto-contraste #SpikePro, .alto-contraste #galeria, .alto-contraste .fundo-galeria { background: none; }
 
-.alto-contraste .botao-inicio, 
-.alto-contraste .formulario button, 
-.alto-contraste .btn-primary { 
-  background-color: var(--alto-contraste-link); 
-  color: var(--alto-contraste-fundo); 
-}
-
-.alto-contraste #SpikePro, 
-.alto-contraste #galeria, 
-.alto-contraste .fundo-galeria { background: none; }

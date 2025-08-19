@@ -186,7 +186,7 @@ h2 {
   color: #fff;
   border: none;
   padding: 0.9rem 1.4rem;   /* botão mais largo e alto */
-  border-radius: 10px;      /* cantos mais arredondados */
+  border-radius: 6px;       /* bordas mais finas */
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.2rem;        /* fonte maior */
   letter-spacing: 1px;      /* espaçamento entre letras */
@@ -198,6 +198,7 @@ h2 {
   background-color: var(--azul-claro);
   transform: scale(1.05);
 }
+
 
 #opcoes-acessibilidade {
   position: fixed;

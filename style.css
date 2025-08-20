@@ -166,10 +166,7 @@ h2 {
    CONTATO
 ========================== */
 #contato {
-  background-image: url('img/4965007.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: none; /* remove a imagem */
   padding: 4rem 0;
 }
 

@@ -166,7 +166,7 @@ h2 {
    CONTATO
 ========================== */
 #contato {
-  background: none; /* remove a imagem */
+  background: none; /* <<< Removido o fundo com imagem */
   padding: 4rem 0;
 }
 
@@ -258,5 +258,6 @@ h2 {
 .alto-contraste #SpikePro,
 .alto-contraste #galeria,
 .alto-contraste .fundo-galeria { background: none; }
+
 
 

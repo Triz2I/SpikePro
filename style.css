@@ -1,6 +1,3 @@
-/* ==========================
-   IMPORTAÇÃO DE FONTES
-========================== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -121,10 +118,17 @@ section {
   z-index: 2;
 }
 
+/* ===== Texto de destaque na seção início ===== */
 .display-4 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 3rem;
   color: var(--azul);
+  text-shadow: -3px 3px var(--azul-claro);
+}
+
+/* Apenas a frase "Boas-vindas a" em branco */
+.display-4 .boas-vindas {
+  color: #ffffff;
   text-shadow: -3px 3px var(--azul-claro);
 }
 
@@ -249,7 +253,6 @@ h2 {
   transform: translateY(0);
 }
 
-
 .alto-contraste {
   background-color: var(--alto-contraste-fundo);
   color: var(--alto-contraste-texto);
@@ -278,4 +281,3 @@ h2 {
 .alto-contraste .fundo-galeria {
   background: none;
 }
-

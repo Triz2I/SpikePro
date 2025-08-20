@@ -210,8 +210,9 @@ h2 {
   color: #fff;
   border: none;
   padding: .6rem 1rem;
-  border-radius: 8px;
-  font-family: 'Bebas Neue', sans-serif;
+  border-radius: 12px; /* <<< mais arredondado */
+  font-family: 'Montserrat', sans-serif; /* <<< fonte mais legível */
+  font-weight: 600; /* <<< texto mais destacado */
   font-size: 1rem;
 }
 
@@ -258,6 +259,7 @@ h2 {
 .alto-contraste #SpikePro,
 .alto-contraste #galeria,
 .alto-contraste .fundo-galeria { background: none; }
+
 
 
 

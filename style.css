@@ -1,46 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 :root {
-  --destaque: #007bff;
-  --azul-claro: #4dafff;
+  --azul: #181061;
+  --azul-claro: #535ce4;
+  --alto-contraste-fundo: #000000;
+  --alto-contraste-texto: #ffffff;
+  --alto-contraste-link: #ffd700;
+  --destaque: #2b35c2;
 }
 
-/* Seção inicial */
-.inicio {
-  background: linear-gradient(135deg, #0a0a23, #1c1c3c);
-  padding: 60px 0;
+* { box-sizing: border-box; }
+
+body {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--azul);
+  background-color: #ffffff;
 }
 
-/* Texto branco */
-.text-white {
-  color: #fff !important;
+:focus-visible {
+  outline: 3px solid var(--azul-claro);
+  outline-offset: 2px;
 }
 
-/* Letreiro mais estético */
-.titulo-estetico {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 3rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-  margin-bottom: 20px;
-}
+header { background-color: #ffffff; }
+section { padding-bottom: 5rem; }
 
-.titulo-estetico .destaque {
-  color: var(--destaque);
-  font-weight: bold;
-}
-
-/* Container da logo para sobreposição */
-.logo-container {
-  position: relative;
-  display: inline-block;
-}
-
-/* Botão sobreposto */
-.botao-inicio {
+/* MENU CENTRAL */
+.menu-central {
   position: absolute;
-  bottom: -20px; /* invade um pouco abaixo da imagem */
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-central .nav-link {
+  color: var(--azul);
+  font-weight: 700;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.menu-central .nav-link:hover {
+  color: var(--azul-claro);
+}
+
+.inicio-fundo {
+  background-image: url('img/4965007.jpg');
+  background-size: cover;
+  background-position: right;
+  border-radius: 80px;
+  width: 100%;
+  height: 606px;
+  padding: 40px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-inicio { position: absolute; right: 0; bottom: 0; max-width: 45rem; height: auto; }
+
+.esquerda-conteudo { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
+
+.botao-inicio {
   background-color: var(--destaque);
   border-radius: 40px;
   border: none;
@@ -56,25 +88,51 @@
   letter-spacing: 1.5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
-  z-index: 10;
 }
 
 .botao-inicio:hover {
   background-color: var(--azul-claro);
-  transform: translateX(-50%) scale(1.05);
+  transform: scale(1.05);
   box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
-/* Ajuste responsivo */
-@media (max-width: 768px) {
-  .titulo-estetico {
-    font-size: 2.2rem;
-  }
+.display-4 { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--azul); text-shadow: -3px 3px var(--azul-claro); }
 
-  .botao-inicio {
-    width: 13em;
-    height: 3em;
-    font-size: 1.2rem;
-  }
+#SpikePro { position: relative; padding-top: 5rem; margin: 3rem 0; background: url('img/flor.png') top right no-repeat, url('img/flor-esquerda.png') bottom left no-repeat; background-size: 180px 180px; }
+
+#SpikePro .container { display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
+
+h2 { font-family: 'Lemon', serif; font-size: 2.8em; color: var(--destaque); text-align: center; text-transform: uppercase; }
+
+#galeria { background-color: #FAF4F4; }
+
+.fundo-galeria { background: url('img/flor-bottom-direita.png') bottom right no-repeat; background-size: 180px 180px; }
+
+#contato { background-image: url('img/4965007.jpg'); background-size: cover; padding: 4rem 0; }
+
+.formulario {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+  color: var(--azul);
+  font-family: 'Montserrat', sans-serif;
 }
+
+.formulario button { background-color: var(--destaque); border: none; font-weight: bold; color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 1px; }
+.form-control { background-color: #F1EDEF; font-family: 'Montserrat', sans-serif; font-weight: 500; }
+
+.menu-acessibilidade { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+#botao-acessibilidade { position: fixed; top: 20px; right: 20px; z-index: 1001; background-color: var(--destaque); color: #fff; border: none; padding: .6rem 1rem; border-radius: 8px; font-family: 'Bebas Neue', sans-serif; font-size: 1rem; }
+
+#opcoes-acessibilidade { position: fixed; top: 64px; right: 20px; display: flex; flex-direction: column; gap: .5rem; z-index: 1000; opacity: 0; transform: translateY(-4px); transition: opacity .2s ease, transform .2s ease; }
+#opcoes-acessibilidade[hidden] { display: none !important; }
+#opcoes-acessibilidade.is-open { opacity: 1; transform: translateY(0); }
+
+.alto-contraste { background-color: var(--alto-contraste-fundo); color: var(--alto-contraste-texto); }
+.alto-contraste header, .alto-contraste footer, .alto-contraste .formulario { background-color: var(--alto-contraste-fundo); color: var(--alto-contraste-texto); }
+.alto-contraste .nav-link { color: var(--alto-contraste-link); }
+.alto-contraste .botao-inicio, .alto-contraste .formulario button, .alto-contraste .btn-primary { background-color: var(--alto-contraste-link); color: var(--alto-contraste-fundo); }
+.alto-contraste #SpikePro, .alto-contraste #galeria, .alto-contraste .fundo-galeria { background: none; }
 

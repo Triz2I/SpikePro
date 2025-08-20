@@ -65,7 +65,7 @@ section { padding-bottom: 5rem; }
    SEÇÃO INÍCIO
 ========================== */
 .inicio-fundo {
-  background-image: url('img/4965007.jpg');
+  background-image: url('img/4965007.png');
   background-size: cover;
   background-position: right;
   border-radius: 80px;
@@ -165,7 +165,7 @@ h2 {
    CONTATO
 ========================== */
 #contato {
-  background-image: url('img/4965007.jpg');
+  background-image: url('img/4965007.png');
   background-size: cover;
   padding: 4rem 0;
 }

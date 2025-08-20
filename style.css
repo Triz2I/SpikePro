@@ -17,9 +17,7 @@
 /* ==========================
    CONFIGURAÇÕES GERAIS
 ========================== */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   font-size: 1rem;
@@ -33,13 +31,8 @@ body {
   outline-offset: 2px;
 }
 
-header {
-  background-color: #ffffff;
-}
-
-section {
-  padding-bottom: 5rem;
-}
+header { background-color: #ffffff; }
+section { padding-bottom: 5rem; }
 
 /* ==========================
    MENU CENTRAL
@@ -66,9 +59,7 @@ section {
   transition: color 0.2s ease;
 }
 
-.menu-central .nav-link:hover {
-  color: var(--azul-claro);
-}
+.menu-central .nav-link:hover { color: var(--azul-claro); }
 
 /* ==========================
    SEÇÃO INÍCIO
@@ -113,12 +104,12 @@ section {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.2rem;
   letter-spacing: 1px;
-  margin-top: -20px; /* faz o botão sobrepor um pouco a imagem */
+  margin-top: -20px;
   position: relative;
   z-index: 2;
 }
 
-/* ===== Texto de destaque na seção início ===== */
+/* Título da seção início */
 .display-4 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 3rem;
@@ -163,9 +154,7 @@ h2 {
 /* ==========================
    GALERIA
 ========================== */
-#galeria {
-  background-color: #FAF4F4;
-}
+#galeria { background-color: #FAF4F4; }
 
 .fundo-galeria {
   background: url('img/flor-bottom-direita.png') bottom right no-repeat;
@@ -185,7 +174,7 @@ h2 {
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
   font-weight: bold;
   color: var(--azul);
   font-family: 'Montserrat', sans-serif;
@@ -210,12 +199,7 @@ h2 {
 /* ==========================
    MENU DE ACESSIBILIDADE
 ========================== */
-.menu-acessibilidade {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
+.menu-acessibilidade { position: fixed; top: 20px; right: 20px; z-index: 1000; }
 
 #botao-acessibilidade {
   position: fixed;
@@ -244,15 +228,12 @@ h2 {
   transition: opacity .2s ease, transform .2s ease;
 }
 
-#opcoes-acessibilidade[hidden] {
-  display: none !important;
-}
+#opcoes-acessibilidade[hidden] { display: none !important; }
+#opcoes-acessibilidade.is-open { opacity: 1; transform: translateY(0); }
 
-#opcoes-acessibilidade.is-open {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* ==========================
+   ALTO CONTRASTE
+========================== */
 .alto-contraste {
   background-color: var(--alto-contraste-fundo);
   color: var(--alto-contraste-texto);
@@ -265,9 +246,7 @@ h2 {
   color: var(--alto-contraste-texto);
 }
 
-.alto-contraste .nav-link {
-  color: var(--alto-contraste-link);
-}
+.alto-contraste .nav-link { color: var(--alto-contraste-link); }
 
 .alto-contraste .botao-inicio,
 .alto-contraste .formulario button,
@@ -278,6 +257,5 @@ h2 {
 
 .alto-contraste #SpikePro,
 .alto-contraste #galeria,
-.alto-contraste .fundo-galeria {
-  background: none;
-}
+.alto-contraste .fundo-galeria { background: none; }
+

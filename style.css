@@ -152,10 +152,11 @@ h2 {
   text-transform: uppercase;
 }
 
-/* ==========================
-   GALERIA
-========================== */
-#galeria { background-color: #c8d8f0; }
+#galeria { 
+  background-color: #c8d8f0; 
+  border-radius: 20px; 
+  padding: 2rem;      
+}
 
 .fundo-galeria {
   background: url('img/flor-bottom-direita.png') bottom right no-repeat;

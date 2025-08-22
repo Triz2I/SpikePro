@@ -3,6 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap'); /* <<< Fonte arredondada */
 
+/* Fonte personalizada Khofira */
+@font-face {
+  font-family: 'Khofira';
+  src: url('fonts/Khofira.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --azul: #181061;
@@ -30,6 +37,7 @@ body {
 header { background-color: #ffffff; }
 section { padding-bottom: 5rem; }
 
+/* MENU */
 .menu-central {
   position: absolute;
   top: 20px;
@@ -54,6 +62,7 @@ section { padding-bottom: 5rem; }
 
 .menu-central .nav-link:hover { color: var(--azul-claro); }
 
+/* INÍCIO */
 .inicio-fundo {
   background-image: url('img/4965007.png');
   background-size: cover;
@@ -112,6 +121,7 @@ section { padding-bottom: 5rem; }
   text-shadow: -3px 3px var(--azul-claro);
 }
 
+/* SPIKE PRO */
 #SpikePro {
   position: relative;
   padding-top: 5rem;
@@ -129,6 +139,7 @@ section { padding-bottom: 5rem; }
   z-index: 1;
 }
 
+/* TÍTULOS PADRÃO */
 h2 {
   font-family: 'Quicksand', sans-serif; 
   font-size: 2.8em;
@@ -136,6 +147,17 @@ h2 {
   text-align: center;
   font-weight: 700;
   letter-spacing: 1px;
+}
+
+/* TÍTULOS ESPECÍFICOS COM KHOFERA */
+#SpikePro h2,      /* O que somos? */
+#galeria h2,       /* Galeria */
+#contato h2 {      /* Entre em contato */
+  font-family: 'Khofira', cursive;
+  font-size: 3.2em;   /* ligeiramente maior que o padrão */
+  letter-spacing: 2px;
+  font-weight: normal;
+  color: var(--destaque);
 }
 
 #galeria { 
@@ -154,6 +176,7 @@ h2 {
   padding: 4rem 0;
 }
 
+/* FORMULÁRIO */
 .formulario {
   background-color: #ffffff;
   padding: 2rem;
@@ -180,6 +203,7 @@ h2 {
   font-weight: 500;
 }
 
+/* ACESSIBILIDADE */
 .menu-acessibilidade { position: fixed; top: 20px; right: 20px; z-index: 1000; }
 
 #botao-acessibilidade {
@@ -237,4 +261,3 @@ h2 {
 .alto-contraste #SpikePro,
 .alto-contraste #galeria,
 .alto-contraste .fundo-galeria { background: none; }
-

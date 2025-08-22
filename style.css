@@ -139,7 +139,7 @@ section { padding-bottom: 5rem; }
   z-index: 1;
 }
 
-/* TÍTULOS PADRÃO */
+
 h2 {
   font-family: 'Quicksand', sans-serif; 
   font-size: 2.8em;
@@ -149,12 +149,12 @@ h2 {
   letter-spacing: 1px;
 }
 
-/* TÍTULOS ESPECÍFICOS COM KHOFERA */
-#SpikePro h2,      /* O que somos? */
-#galeria h2,       /* Galeria */
-#contato h2 {      /* Entre em contato */
+
+#SpikePro h2,     
+#galeria h2,       
+#contato h2 {      
   font-family: 'Khofira', cursive;
-  font-size: 3.2em;   /* ligeiramente maior que o padrão */
+  font-size: 3.2em;  
   letter-spacing: 2px;
   font-weight: normal;
   color: var(--destaque);

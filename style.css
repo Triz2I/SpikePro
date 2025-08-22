@@ -1,13 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap'); /* <<< Fonte arredondada */
 
-@font-face {
-  font-family: 'Khofira';
-  src: url('fonts/Khofira.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 :root {
   --azul: #181061;
@@ -59,6 +54,64 @@ section { padding-bottom: 5rem; }
 
 .menu-central .nav-link:hover { color: var(--azul-claro); }
 
+.inicio-fundo {
+  background-image: url('img/4965007.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 80px;
+  width: 100%;
+  height: 606px;
+  padding: 40px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-inicio {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 45rem;
+  height: auto;
+}
+
+.esquerda-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.botao-inicio {
+  background-color: var(--destaque);
+  border-radius: 30px;
+  border: none;
+  width: 14em;
+  height: 3em;
+  align-content: center;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-top: -20px;
+  position: relative;
+  z-index: 2;
+}
+
+.display-4 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--azul);
+  text-shadow: -3px 3px var(--azul-claro);
+}
+
+.display-4 .boas-vindas {
+  color: #ffffff;
+  text-shadow: -3px 3px var(--azul-claro);
+}
+
 #SpikePro {
   position: relative;
   padding-top: 5rem;
@@ -77,11 +130,11 @@ section { padding-bottom: 5rem; }
 }
 
 h2 {
-  font-family: 'Khofira', sans-serif; 
-  font-size: 3em;
+  font-family: 'Quicksand', sans-serif; 
+  font-size: 2.8em;
   color: var(--destaque);
   text-align: center;
-  font-weight: normal;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
@@ -95,7 +148,6 @@ h2 {
   background: url('img/flor-bottom-direita.png') bottom right no-repeat;
   background-size: 180px 180px;
 }
-
 
 #contato {
   background: none;
@@ -127,7 +179,6 @@ h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
-
 
 .menu-acessibilidade { position: fixed; top: 20px; right: 20px; z-index: 1000; }
 
@@ -186,3 +237,4 @@ h2 {
 .alto-contraste #SpikePro,
 .alto-contraste #galeria,
 .alto-contraste .fundo-galeria { background: none; }
+
